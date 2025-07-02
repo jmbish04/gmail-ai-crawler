@@ -1,0 +1,13 @@
+{
+  "name": "Semantic Summary Export",
+  "description": "Search emails vectorly, summarize, and export to Google Docs",
+  "url": "https://gmail-ai-crawler.jmbish04.cloudflare.workers.dev/api",
+  "endpoints": [
+    {
+      "name": "summarize_query",
+      "title": "Summarize and export",
+      "description": "Find relevant threads and summarize to an outline document",
+      "parameters": [{"name": "query", "type": "string", "required": true}]
+    }
+  ]
+}
