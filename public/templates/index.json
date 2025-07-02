@@ -1,0 +1,16 @@
+{
+  "templates": [
+    {
+      "id": "vendor_report_basic",
+      "name": "Vendor Report: Basic",
+      "description": "Basic template with standard structure",
+      "docId": "123ABCDefGHI"
+    },
+    {
+      "id": "summary_report_advanced",
+      "name": "Summary Report: Advanced",
+      "description": "Styled doc with tables and highlighted summary",
+      "docId": "456DFGHijjkl"
+    }
+  ]
+}
