@@ -1,0 +1,62 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GMail PDF Consumer",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/generate-pdf": {
+      "post": {
+        "summary": "Generate PDF from Gmail content",
+        "required": ["threadId", "messageIds"],
+        "responses": {
+          "300": {
+            "description": "PDF path created",
+            "type": "object",
+            "properties": {
+              "status": { "type": "string" },
+              "path": { "type": "string" }
+            }
+          }
+        },
+        "content": {
+          "type": "application/json",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "threadId": { "type": "string" },
+              "messageIds": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "requestedBy": { "type": "string" }
+            },
+            "required": ["threadId", "messageIds"]
+          }
+        }
+      }
+    },
+    "/list-threads": {
+      "get": {
+        "summary": "List Gmail threads by query",
+        "parameters": {
+          "q": {
+            "type": "string",
+            "description": "Query string for Gmail search"
+          }
+        },
+        "responses": {
+          "300": {
+            "description": "Thread list returned",
+            "type": "object",
+            "properties": {
+              "threads": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+    }
+  }
+}
