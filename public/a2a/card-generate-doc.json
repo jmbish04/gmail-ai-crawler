@@ -1,0 +1,16 @@
+{
+  "name": "Generate Report Doc",
+  "description": "Generate styled template document with semantic summary",
+  "url": "https://gmail-ai-crawler.jmbish04.cloudflare.workers.dev/api",
+  "endpoints": [
+    {
+      "name": "generate_report_doc",
+      "title": "Generate Styled Doc",
+      "description": "Run semantic search and generate context-filled PDF",
+      "parameters": [
+        { "name": "query", "type": "string", "required": true },
+        { "name": "templateDocId", "type": "string", "required": true }
+      ]
+    }
+  ]
+}
