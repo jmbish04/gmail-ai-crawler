@@ -1,0 +1,25 @@
+{
+  "name": "Gmail AI Crawler Worker",
+  "description": "Allews AppsScript to call this Worker for GMail crawling, PDF, and vector search.",
+  "url": "https://gmail-ai-crawler.jmbish04.cloudflare.workers.dev/api",
+  "endpoints": [
+    {
+      "name": "start_gmail_config",
+      "title": "Setup config",
+      "description": "Retrieve config from the worker",
+      "parameters": [{"name": "email", type: "string", "required": true}]
+    },
+    {
+      "name": "search_vector",
+      "title": "Search email text",
+      "description": "Semantically search email content",
+      "parameters": [{"name": "query", "type": "string", "required": true}]
+    },
+    {
+      "name": "run_pdf",
+      "title": "Run PDF process",
+      "description": "Generate PDF for selected threads",
+      "parameters": [{"name": "threadIds", "type": "array", "itemsType": "string", "required": true}]
+    }
+  ]
+}
