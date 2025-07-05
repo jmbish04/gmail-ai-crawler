@@ -1,0 +1,41 @@
+EMAIL INTAKE ROUTING LOGIC (HIGH LEVEL)
+
+J-New Email Arrives
+
+--------------------------------
+
+                                   
+                     INITIAL CLASSIFICATION            
+                                  
+                      -- Scan for keywords, region, metadata
+
+--Exists Known Triggers?
+  |- Yes                                                              |  No
+   |                                                                 |
+   | AI Content Analysis                                                  |
+   |                                                                 |
+   | Route to async paths                                              |
+
+-----------------------------------------------------------------
+
+ROUTING BRANCHES
+
+ 1. House Projects & Contractors
+    - Analyze contractor background
+    - Verify licensing, reviews
+    - Analyze contract content, suggest redlines
+    - Validate infoices vs contracts
+    - Track costs, store in database
+
+ 2. Daily Life Events
+    - Package delivery, notification
+    - Home Assistant integration: camera detection, lights, tt.
+    - Route notifications to relevant systems.
+
+ 3. Financial Management
+    - Bill and statement parsing
+    - Invoice PDF extraction, itemization
+    - Insest validation against contracts
+    - Record to database (C1/)
+
+ NOTE: The Worker only performs intake, classification, then routes data to domain services.
