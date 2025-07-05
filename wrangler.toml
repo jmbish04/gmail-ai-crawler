@@ -1,0 +1,14 @@
+name = "gmail-ai-crawler"
+type = "module"
+
+build = { command = "npm run build" }
+
+schedule = [
+"0* * * * * "
+ ]
+
+[triggers]
+crons = ["0 * * * * *"]
+
+[env.production]
+workers_dev = true
